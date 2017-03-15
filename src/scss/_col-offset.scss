@@ -1,0 +1,3 @@
+@mixin col-offset($size) {
+  margin-left: ($size / 12) * 100%;
+}

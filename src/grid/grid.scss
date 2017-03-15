@@ -1,0 +1,14 @@
+@import '../scss/screen-sizes';
+
+
+.grid {
+  padding: 25px 12.5px 0;
+
+  @media screen and (max-width: $xs-max) {
+    padding: 20px 10px 0;
+  }
+
+  &.remove-padding {
+    padding: 0;
+  }
+}
