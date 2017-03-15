@@ -14,7 +14,7 @@ Components
 ####Col
 
 | Property | Type | Default | Description |
-|-----------------------------------------|
+|----------|------|---------|-------------|
 | children | Any | | The content to wrap inside the column. |
 | className | String | Empty string | A class name to give custom styling to the column. |
 | padding | Boolean | true | Whether the column should contain padding around its children. |
@@ -32,7 +32,7 @@ Components
 ####Row
 
 | Property | Type | Default | Description |
-|-----------------------------------------|
+|----------|------|---------|-------------|
 | children | Any | | The content to wrap inside the row. |
 | className | String | Empty string | A class name to give custom styling to the row. |
 | padding | Boolean | true | Whether the row should contain padding around its children. |
@@ -52,7 +52,7 @@ Components
 ####Grid
 
 | Property | Type | Default | Description |
-|-----------------------------------------|
+|----------|------|---------|-------------|
 | children | Any | | The content to wrap inside the cgrid. |
 | className | String | Empty string | A class name to give custom styling to the grid. |
 | padding | Boolean | true | Whether the grid should contain padding around its children. |
