@@ -11,7 +11,7 @@ Flex React is a grid-based set of components for React. It offers the following 
 Components
 ----------
 
-####Col
+### Col
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
@@ -29,7 +29,7 @@ Components
 | ...restProps |   |  | Use this to add any additional props to the <div> component. |
 
 
-####Row
+### Row
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
@@ -49,7 +49,7 @@ Components
 | ...restProps |   |  | Use this to add any additional props to the <div> component. |
 
 
-####Grid
+### Grid
 
 | Property | Type | Default | Description |
 |----------|------|---------|-------------|
