@@ -7,6 +7,12 @@ Flex React is a grid-based set of components for React. It offers the following 
  - Styles written using CSS flexbox
  - All styling used is prefixed to work across browsers
  - More?
+
+## Install
+
+```bash
+npm install --save flex-react
+```
  
 Components
 ----------
