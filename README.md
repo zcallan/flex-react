@@ -12,6 +12,7 @@ Components
 ----------
 
 ####Col
+
 | Property | Type | Default | Description |
 |-----------------------------------------|
 | children | Any | | The content to wrap inside the column. |
@@ -29,6 +30,7 @@ Components
 
 
 ####Row
+
 | Property | Type | Default | Description |
 |-----------------------------------------|
 | children | Any | | The content to wrap inside the row. |
@@ -48,6 +50,7 @@ Components
 
 
 ####Grid
+
 | Property | Type | Default | Description |
 |-----------------------------------------|
 | children | Any | | The content to wrap inside the cgrid. |

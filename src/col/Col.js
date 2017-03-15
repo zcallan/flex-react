@@ -6,7 +6,6 @@ const Col = ({
   children,
   className,
   padding,
-  style,
   xs = 12,
   sm = xs,
   md = sm,
@@ -15,6 +14,7 @@ const Col = ({
   smOffset = xsOffset,
   mdOffset = smOffset,
   lgOffset = mdOffset,
+  ...restProps,
 }) => {
   const xsOffsetClass = ( xsOffset ) ? `xs-offset-${xsOffset}` : '';
   const smOffsetClass = ( smOffset ) ? `sm-offset-${smOffset}` : '';
@@ -24,7 +24,7 @@ const Col = ({
   const colClasses = `xs-${xs} sm-${sm} md-${md} lg-${lg}`;
 
   return (
-    <div className={`col ${colClasses} ${offSetClasses} ${className} ${padding ? 'col-padding' : ''}`} style={style}>
+    <div {...restProps} className={`col ${colClasses} ${offSetClasses} ${className} ${padding ? 'col-padding' : ''}`}>
       {children}
     </div>
   );
@@ -39,7 +39,6 @@ Col.propTypes = {
   children: React.PropTypes.any,
   className: React.PropTypes.string,
   padding: React.PropTypes.bool,
-  style: React.PropTypes.object,
   xs: React.PropTypes.number,
   sm: React.PropTypes.number,
   md: React.PropTypes.number,

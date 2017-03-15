@@ -2,9 +2,9 @@ import './grid.css';
 import React from 'react';
 
 
-const Grid = ({ children, className, padding }) => {
+const Grid = ({ children, className, padding, ...restProps }) => {
   return (
-    <div className={`grid ${!padding ? 'remove-padding' : ''} ${className}`}>
+    <div {...restProps} className={`grid ${!padding ? 'remove-padding' : ''} ${className}`}>
       {children}
     </div>
   );

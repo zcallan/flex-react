@@ -1,6 +1,6 @@
 .col {
   display: flex;
-  flex-direction: row; }
+  flex-direction: column; }
   .col.col-padding {
     padding: 0 12.5px 25px; }
     @media screen and (max-width: 767px) {

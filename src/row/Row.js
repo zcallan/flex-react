@@ -16,6 +16,7 @@ const Row = ({
   sm = xs,
   md = sm,
   lg = md,
+  ...restProps,
 }) => {
   const colClasses = `xs-${xs} sm-${sm} md-${md} lg-${lg}`;
   const paddingClass = ( padding ) ? 'row-padding' : '';
@@ -29,7 +30,7 @@ const Row = ({
   else if ( spaceBetween ) position = 'row-space-between';
 
   return (
-    <div className={`row ${colClasses} ${position} ${paddingClass} ${vAlignClass} ${className}`}>
+    <div {...restProps} className={`row ${colClasses} ${position} ${paddingClass} ${vAlignClass} ${className}`}>
       {children}
     </div>
   );

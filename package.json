@@ -1,11 +1,10 @@
 {
   "name": "flex-react",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A React component library to build flex-based grids.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel src/ --presets babel-preset-es2015 --out-dir dist/ && node-sass src/ -o dist/",
-    "build-scss": "node-sass src/ -o src/",
+    "build": "babel src/ --presets babel-preset-es2015 --out-dir dist/ && node-sass src/ -o dist/ && node-sass src/ -o src/ && postcss dist/**/*.css -r --use autoprefixer",
     "watch-scss": "node-sass -w src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,13 +25,15 @@
   },
   "homepage": "https://github.com/zcallan/flex-react#readme",
   "devDependencies": {
+    "autoprefixer": "^6.7.7",
     "babel-cli": "^6.24.0",
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-1": "^6.22.0",
-    "node-sass": "^4.5.0"
+    "node-sass": "^4.5.0",
+    "postcss-cli": "^3.0.0-beta"
   },
-  "dependencies": {
-    "react": "^15.4.2"
+  "peerDependencies": {
+    "react": "~0.14.8 || ^15.0.0"
   }
 }
