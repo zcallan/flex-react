@@ -4,7 +4,7 @@ import React from 'react';
 
 const Grid = ({ children, className, padding, ...restProps }) => {
   return (
-    <div {...restProps} className={`grid ${!padding ? 'remove-padding' : ''} ${className}`}>
+    <div {...restProps} className={`flex-react-grid ${!padding ? 'remove-padding' : ''} ${className}`}>
       {children}
     </div>
   );

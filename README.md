@@ -1,4 +1,4 @@
-Flex React (version 1.2.1)
+Flex React (version 1.2.2)
 ==========================
 
 Flex React is a grid-based set of components for React. It offers the following features:
@@ -16,6 +16,20 @@ Flex React is a grid-based set of components for React. It offers the following 
 npm install --save flex-react
 ```
 
+Styles should be automatically applied if using [webpack](https://webpack.github.io/docs/). Use the following loaders:
+
+```js
+{
+    test: /\.css$/,
+    use: ['style-loader', 'css-loader'],
+},
+```
+
+Otherwise, manually import the styles in your root component with:
+
+```js
+import 'flex-react/dist/flex-react.css';
+```
 
 ## Example
 
@@ -77,12 +91,16 @@ class Example extends Component {
 | lg | Large | Desktop Monitor | 1200px and up |
 
 > You can always use `Row`s and `Col`s without `Grid`s
-> Use of `Col`s without `Row`s may infer spacing bugs
-> You can remove the padding on any component with `padding={false}`
-> You can add your own custom class names to any component with `className="style-name"`
-> (against my recommendation) You can add any usual props which can be applied to on a `<div>` to any component, such as `onClick`, `onFocus` etc.
-> (my recommendation is) It is much neater to apply event listeners etc to child components, `Grid` `Row` and `Col` should typically be dumb components.
 
+> Use of `Col`s without `Row`s may infer spacing bugs
+
+> You can remove the padding on any component with `padding={false}`
+
+> You can add your own custom class names to any component with `className="style-name"`
+
+> (against my recommendation) You can add any usual props which can be applied to on a `<div>` to any component, such as `onClick`, `onFocus` etc.
+
+> (my recommendation is) It is much neater to apply event listeners etc to child components, `Grid` `Row` and `Col` should typically be dumb components.
 
 ## Components
 
@@ -132,6 +150,7 @@ class Example extends Component {
 | className | String | Empty string | A class name to give custom styling to the grid. |
 | padding | Boolean | true | Whether the grid should contain padding around its children. |
 | ...restProps |   |  | Use this to add any additional props to the <div> component. |
+
 
 
 File an issue for any bugs found, or if you want any features added.

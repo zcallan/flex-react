@@ -1,10 +1,11 @@
 {
   "name": "flex-react",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A React component library to build flex-based grids.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel src/ --presets babel-preset-es2015 --out-dir dist/ && node-sass src/ -o dist/ && node-sass src/ -o src/ && postcss dist/**/*.css -r --use autoprefixer",
+    "build": "babel src/ --presets babel-preset-es2015 --out-dir dist/ && node-sass src/ -o dist/ && postcss dist/**/*.css -r --use autoprefixer",
+    "concat-css": "cat dist/**/*.css > dist/flex-react.css",
     "watch-scss": "node-sass -w src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
