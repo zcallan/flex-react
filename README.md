@@ -6,16 +6,85 @@ Flex React is a grid-based set of components for React. It offers the following 
  - Component-based grid system
  - Styles written using CSS flexbox
  - All styling used is prefixed to work across browsers
- - More?
+ - Only peer-dependency is React
+ - Designed to help build mobile-responsive applications
+ - Easy to use!
 
 ## Install
 
 ```bash
 npm install --save flex-react
 ```
- 
-Components
-----------
+
+
+## Example
+
+```js
+import React, { Component } from 'react';
+import { Grid, Row, Col } from 'flex-react';
+
+
+class Example extends Component {
+    render() {
+        return (
+            <Grid className="example">
+                <Row>
+                    <Col sm={6}>
+                        <p>Apart from on mobile, this will take up 50% of the row!</p>
+                    </Col>
+
+                    <Col sm={6}>
+                        <p>And this will take up the other 50%!</p>
+                    </Col>
+                </Row>
+
+                <Row center>
+                    <Col xs={4}>
+                        <p>This will be centered!</p>
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col xs={4} xsOffset={4}>
+                        <p>This is another way to make something centered!</p>
+                    </Col>
+                </Row>
+
+                <Row spaceBetween>
+                    <Col sm={3}>
+                        <p>This will be aligned on the left,</p>
+                    </Col>
+
+                    <Col sm={3}>
+                        <p>and this will be aligned on the right!</p>
+                    </Col>
+                </Row>
+            </Grid>
+        );
+    }
+}
+```
+
+![example code](http://files.kaln.io/flex-react-example.png)
+
+## Notes
+
+| Abbreviation | Meaning | Screen Size | Pixels |
+|--------------|---------|-------------|--------|
+| xs | Extra Small | Mobile | 0 to 767px |
+| sm | Small | Tablet | 768px to 991px |
+| md | Medium | Laptop Monitor | 992px to 1199px |
+| lg | Large | Desktop Monitor | 1200px and up |
+
+> You can always use `Row`s and `Col`s without `Grid`s
+> Use of `Col`s without `Row`s may infer spacing bugs
+> You can remove the padding on any component with `padding={false}`
+> You can add your own custom class names to any component with `className="style-name"`
+> (against my recommendation) You can add any usual props which can be applied to on a `<div>` to any component, such as `onClick`, `onFocus` etc.
+> (my recommendation is) It is much neater to apply event listeners etc to child components, `Grid` `Row` and `Col` should typically be dumb components.
+
+
+## Components
 
 ### Col
 
@@ -66,3 +135,6 @@ Components
 
 
 File an issue for any bugs found, or if you want any features added.
+I'm happy to always keep improving this package, let me know if you run into any errors.
+
+Thanks!
