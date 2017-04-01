@@ -1,4 +1,4 @@
-Flex React (version 1.2.2)
+Flex React (version 1.2.3)
 ==========================
 
 Flex React is a grid-based set of components for React. It offers the following features:
@@ -16,16 +16,7 @@ Flex React is a grid-based set of components for React. It offers the following 
 npm install --save flex-react
 ```
 
-Styles should be automatically applied if using [webpack](https://webpack.github.io/docs/). Use the following loaders:
-
-```js
-{
-    test: /\.css$/,
-    use: ['style-loader', 'css-loader'],
-},
-```
-
-Otherwise, manually import the styles in your root component with:
+Import the styles in the initially mounted component using:
 
 ```js
 import 'flex-react/dist/flex-react.css';
@@ -90,17 +81,7 @@ class Example extends Component {
 | md | Medium | Laptop Monitor | 992px to 1199px |
 | lg | Large | Desktop Monitor | 1200px and up |
 
-> You can always use `Row`s and `Col`s without `Grid`s
-
-> Use of `Col`s without `Row`s may infer spacing bugs
-
-> You can remove the padding on any component with `padding={false}`
-
-> You can add your own custom class names to any component with `className="style-name"`
-
-> (against my recommendation) You can add any usual props which can be applied to on a `<div>` to any component, such as `onClick`, `onFocus` etc.
-
-> (my recommendation is) It is much neater to apply event listeners etc to child components, `Grid` `Row` and `Col` should typically be dumb components.
+> Always nest `Col` inside a `Row`. Not always necessary to wrap `Row` in `Grid`.
 
 ## Components
 
