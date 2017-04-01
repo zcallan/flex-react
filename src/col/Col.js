@@ -24,7 +24,7 @@ const Col = ({
   const colClasses = `xs-${xs} sm-${sm} md-${md} lg-${lg}`;
 
   return (
-    <div {...restProps} className={`flex-react-col ${colClasses} ${offSetClasses} ${className} ${padding ? 'col-padding' : ''}`}>
+    <div {...restProps} className={`col ${colClasses} ${offSetClasses} ${className} ${padding ? 'col-padding' : ''}`}>
       {children}
     </div>
   );

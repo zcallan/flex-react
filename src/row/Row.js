@@ -30,7 +30,7 @@ const Row = ({
   else if ( spaceBetween ) position = 'row-space-between';
 
   return (
-    <div {...restProps} className={`flex-react-row ${colClasses} ${position} ${paddingClass} ${vAlignClass} ${className}`}>
+    <div {...restProps} className={`row ${colClasses} ${position} ${paddingClass} ${vAlignClass} ${className}`}>
       {children}
     </div>
   );
