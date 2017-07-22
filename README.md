@@ -1,4 +1,4 @@
-Flex React v1.2.7
+Flex React v1.2.8
 ==========================
 
 Flex React is a grid-based set of components for React. It offers the following features:
@@ -137,7 +137,27 @@ class Example extends Component {
 | className | String | Empty string | A class name to give custom styling to the grid. |
 | ...restProps |   |  | Use this to add any additional props to the <div> component. |
 
+# Development
 
+To begin development, run the following:
+
+```bash
+npm start
+```
+
+This will host a `webpack dev server` at `localhost:3000` where you can play around with the components.
+
+The main file/'test harness' is located under `/dev` and webpack will serve them from `/dev-build`.
+
+To modify the components themselves, simply edit them under the `/src` directory.
+
+To build the files, simply run:
+
+```bash
+npm run build
+```
+
+---
 
 File an issue for any bugs found, or if you want any features added.
 I'm happy to always keep improving this package, let me know if you run into any errors.

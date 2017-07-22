@@ -15,7 +15,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js?$/,
+        test: /\.jsx?$/,
         exclude: /node-modules/,
         loader: 'babel-loader',
       },
@@ -23,7 +23,7 @@ module.exports = {
         test: /\.scss$/,
         use: ExtractText.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader'],
+          use: ['css-loader', 'postcss-loader', 'sass-loader'],
         }),
       }
     ],
