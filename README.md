@@ -1,4 +1,4 @@
-Flex React v1.2.9
+Flex React v1.3.0
 ==========================
 
 Flex React is a grid-based set of components for React. It offers the following features:
