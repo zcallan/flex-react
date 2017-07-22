@@ -8,7 +8,7 @@ module.exports = {
   entry: path.resolve( __dirname, './src/index.js' ),
   output: {
     path: path.resolve( __dirname, './dist' ),
-    filename: '[name].js',
+    filename: 'index.js',
     library: 'flex-react',
     libraryTarget: 'umd',
   },
@@ -50,6 +50,6 @@ module.exports = {
     }),
     new webpack.LoaderOptionsPlugin({ minimize: true, debug: false }),
     new webpack.NamedModulesPlugin(),
-    new ExtractText( '[name].css' ),
+    new ExtractText( 'style.css' ),
   ],
 };

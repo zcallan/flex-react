@@ -1,9 +1,9 @@
-Flex React v1.2.6
+Flex React v1.2.7
 ==========================
 
 Flex React is a grid-based set of components for React. It offers the following features:
 
- - Created to be lightweight grid solution
+ - Created to be a lightweight grid solution
  - Component-based grid system
  - Styles written using CSS flexbox
  - All styling used is prefixed to work across browsers
@@ -11,16 +11,25 @@ Flex React is a grid-based set of components for React. It offers the following 
  - Designed to help build mobile-responsive applications
  - Easy to use!
 
+> As of v1.2.6, there is no padding prop in any component.
+
+> In a later version I may add a method to create a wrapper around these components to specify padding, but I could not resolve a specific style bug where an overflow of `Col` inside a `Row` would cause issues.
+
+> As a result, `Grid` has no actual purpose as of v1.2.6.
+
+> In the meantime, this package will have no supported way of creating 'gutters'/padding between components. Thanks
+
+
 ## Install
 
 ```bash
 npm install --save flex-react
 ```
 
-Import the styles in the initially mounted component using:
+If you don't see any styling appear, import this file somewhere high-level in your app:
 
 ```js
-import 'flex-react/dist/flex-react.css';
+import 'flex-react/dist/style.css';
 ```
 
 ## Example
@@ -82,8 +91,6 @@ class Example extends Component {
 | md | Medium | Laptop Monitor | 992px to 1199px |
 | lg | Large | Desktop Monitor | 1200px and up |
 
-> Always nest `Col` inside a `Row`. Not always necessary to wrap `Row` in `Grid`.
-
 ## Components
 
 ### Col
@@ -92,7 +99,6 @@ class Example extends Component {
 |----------|------|---------|-------------|
 | children | Any | | The content to wrap inside the column. |
 | className | String | Empty string | A class name to give custom styling to the column. |
-| padding | Boolean | true | Whether the column should contain padding around its children. |
 | xs | Number | 12 | The number of units to set as the column width. (0-12) |
 | sm | Number | [xs] | The number of units to set as the column width. (0-12) |
 | md | Number | [sm] | The number of units to set as the column width. (0-12) |
@@ -110,7 +116,6 @@ class Example extends Component {
 |----------|------|---------|-------------|
 | children | Any | | The content to wrap inside the row. |
 | className | String | Empty string | A class name to give custom styling to the row. |
-| padding | Boolean | true | Whether the row should contain padding around its children. |
 | xs | Number | 12 | The number of units to set as the row width. (0-12) |
 | sm | Number | [xs] | The number of units to set as the row width. (0-12) |
 | md | Number | [sm] | The number of units to set as the row width. (0-12) |
@@ -130,7 +135,6 @@ class Example extends Component {
 |----------|------|---------|-------------|
 | children | Any | | The content to wrap inside the cgrid. |
 | className | String | Empty string | A class name to give custom styling to the grid. |
-| padding | Boolean | true | Whether the grid should contain padding around its children. |
 | ...restProps |   |  | Use this to add any additional props to the <div> component. |
 
 
