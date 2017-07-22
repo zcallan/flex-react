@@ -3,6 +3,11 @@
 @import './screen-sizes';
 
 
+.xs-0 { display: none !important }
+.sm-0 { display: none !important }
+.md-0 { display: none !important }
+.lg-0 { display: none !important }
+
 @for $size from 1 through 12 {
   @media (max-width: $xs-max) {
     .xs-#{$size} { @include col-size( $size ) }
