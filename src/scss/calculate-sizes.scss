@@ -1,0 +1,26 @@
+@import './col-offset';
+@import './col-size';
+@import './screen-sizes';
+
+
+@for $size from 1 through 12 {
+  @media (max-width: $xs-max) {
+    .xs-#{$size} { @include col-size( $size ) }
+    .xs-offset-#{$size} { @include col-offset( $size ) }
+  }
+
+  @media (min-width: $sm-min) and (max-width: $sm-max) {
+    .sm-#{$size} { @include col-size( $size ) }
+    .sm-offset-#{$size} { @include col-offset( $size ) }
+  }
+
+  @media (min-width: $md-min) and (max-width: $md-max) {
+    .md-#{$size} { @include col-size( $size ) }
+    .md-offset-#{$size} { @include col-offset( $size ) }
+  }
+
+  @media (min-width: $lg-min) {
+    .lg-#{$size} { @include col-size( $size ) }
+    .lg-offset-#{$size} { @include col-offset( $size ) }
+  }
+}

@@ -1,11 +1,11 @@
-import './col.css';
+import './col.scss';
 import React from 'react';
+import { any, bool, number, string } from 'prop-types';
 
 
 const Col = ({
   children,
-  className,
-  padding,
+  className = '',
   xs = 12,
   sm = xs,
   md = sm,
@@ -24,29 +24,24 @@ const Col = ({
   const colClasses = `xs-${xs} sm-${sm} md-${md} lg-${lg}`;
 
   return (
-    <div {...restProps} className={`col ${colClasses} ${offSetClasses} ${className} ${padding ? 'col-padding' : ''}`}>
+    <div {...restProps} className={`col ${colClasses} ${offSetClasses} ${className}`}>
       {children}
     </div>
   );
 };
 
-Col.defaultProps = {
-  className: '',
-  padding: true,
-};
-
 Col.propTypes = {
-  children: React.PropTypes.any,
-  className: React.PropTypes.string,
-  padding: React.PropTypes.bool,
-  xs: React.PropTypes.number,
-  sm: React.PropTypes.number,
-  md: React.PropTypes.number,
-  lg: React.PropTypes.number,
-  xsOffset: React.PropTypes.number,
-  smOffset: React.PropTypes.number,
-  mdOffset: React.PropTypes.number,
-  lgOffset: React.PropTypes.number,
+  children: any,
+  className: string,
+  padding: bool,
+  xs: number,
+  sm: number,
+  md: number,
+  lg: number,
+  xsOffset: number,
+  smOffset: number,
+  mdOffset: number,
+  lgOffset: number,
 };
 
 export default Col;
