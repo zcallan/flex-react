@@ -3,10 +3,21 @@
 @import './screen-sizes';
 
 
-.xs-0 { display: none !important }
-.sm-0 { display: none !important }
-.md-0 { display: none !important }
-.lg-0 { display: none !important }
+@media (max-width: $xs-max) {
+  .xs-0 { display: none !important }
+}
+
+@media (min-width: $sm-min) and (max-width: $sm-max) {
+  .sm-0 { display: none !important }
+}
+
+@media (min-width: $md-min) and (max-width: $md-max) {
+  .md-0 { display: none !important }
+}
+
+@media (min-width: $lg-min) {
+  .lg-0 { display: none !important }
+}
 
 @for $size from 1 through 12 {
   @media (max-width: $xs-max) {
